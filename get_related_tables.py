@@ -27,7 +27,7 @@ for fl in lst:
             line_no += 1
             if line.startswith("class "):
                 class_name = line[6:] ## class name
-            elif  class_name and tb_name in line and "Field" in line :
+            elif class_name and tb_name in line and "Field" in line :
                 total.append([fl, class_name, line])
             else:
                 pass
