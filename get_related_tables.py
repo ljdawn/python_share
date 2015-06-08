@@ -29,7 +29,7 @@ for fl in lst:
             if line.startswith("class "):
                 class_name = line[6:] ## class name
             elif class_name and tb_name in line and "Field" in line :
-                total.append([fl, class_name, line])
+                total.append([fl, class_name.split("(")[0], line])
             else:
                 pass
 for tot in total:
