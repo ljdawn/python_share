@@ -16,6 +16,7 @@ paths, tb_name = sys.argv[1], sys.argv[2]
 lst = []
 ## "." is the paths
 for dirpath, dirnames, filenames in os.walk(paths):
+    ### just use models.py for general
     if "models.py" in filenames:
         lst.append(dirpath + "/models.py")
 
