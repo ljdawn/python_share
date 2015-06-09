@@ -1,1 +1,8 @@
 ###  keep some useful urls here
+
+
+http://daoluan.net/blog/sort/   ## stl algs
+http://www.minongbang.com/deleted?length=2&other=is_num&tld=1  ##domin name
+http://www.weiguda.com/blog/    ## django async
+http://wiki.nginx.org/NginxChs  ## nginx
+https://app.wmcloud.com/mercury/community/  ##quantum
