@@ -6,3 +6,4 @@ http://www.minongbang.com/deleted?length=2&other=is_num&tld=1  ##domin name
 http://www.weiguda.com/blog/    ## django async
 http://wiki.nginx.org/NginxChs  ## nginx
 https://app.wmcloud.com/mercury/community/  ##quantum
+http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## sometimes we verify signature in different languages perhaps this will help
