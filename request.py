@@ -6,16 +6,18 @@ this file used for web testing
 
 import json
 import requests
-import rsa
+from M2Crypto import EVP, RSA, X509
+import base64
 
 req = requests.session()
-key_file = open("../id_rsa","r")
-pri_key = "".join(key_file.readlines())
-key_file.close()
+payload = json.dumps({"user_id":123,"agency_id":"NONE","exp":"2015-09-09"})
+key_file = "~/Asa/ssh/id_rsa"
+private_key = EVP.load_key(key_file)
+private_key.reset_context(md='sha1')
+private_key.sign_init()
+private_key.sign_update(payload)
+signature = base64.b64encode(key.sign_final())
 
-payload = json.dumps({"username":123, "password":123})
-signature = rsa.sign(payload, pri_key, "SHA-1")
 headers = {"payload":payload, "token":signature}
-res = req.post("http://127.0.0.1:8001", headers = headers)
-
-print res
+url = "" # TODO this is ur url testing
+res = req.post("http://192.168.1.81:8004%s"%(url), headers = headers)
