@@ -4,6 +4,7 @@
 this file used for web testing
 """
 
+import io
 import json
 import requests
 from M2Crypto import EVP, RSA, X509
@@ -19,5 +20,11 @@ private_key.sign_update(payload)
 signature = base64.b64encode(key.sign_final())
 
 headers = {"payload":payload, "token":signature}
-url = "" # TODO this is ur url testing
-res = req.post("http://192.168.1.81:8004%s"%(url), headers = headers)
+url = "http://192.168.1.81:8004%s"
+
+def requests(url):
+    file = io.open("README.rst", "rb")
+    files = {"file":file}
+    req = requests.session()
+    request = req.post(url%("api/user/agencies/"), files=files, stream = True)
+    print request.content
