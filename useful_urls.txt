@@ -8,3 +8,5 @@ http://wiki.nginx.org/NginxChs  ## nginx
 https://app.wmcloud.com/mercury/community/  ##quantum
 http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## sometimes we verify signature in different languages perhaps this will help
 http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
+http://nqdeng.github.io/7-days-nodejs/  ## nodejs tutorial
+http://www.pydanny.com/overloading-form-fields.html  ## django init kwargs
