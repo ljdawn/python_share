@@ -6,8 +6,13 @@ http://www.minongbang.com/deleted?length=2&other=is_num&tld=1  ##domin name
 http://www.weiguda.com/blog/    ## django async
 http://wiki.nginx.org/NginxChs  ## nginx
 https://app.wmcloud.com/mercury/community/  ##quantum
-http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## sometimes we verify signature in different languages perhaps this will help
+http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## signature between python and java 
 http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
 http://nqdeng.github.io/7-days-nodejs/  ## nodejs tutorial
 http://www.pydanny.com/overloading-form-fields.html  ## django init kwargs
 http://norvig.com/21-days.html  ## about how to be a better programmer
+http://howtoprogrambetter.com/10-steps-to-become-a-senior-software-engineer/ 
+http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
+http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
+http://www.kzx123.com/?p=137  ## django async
+http://learnyouahaskell.com/chapters  ## haskell

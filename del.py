@@ -10,10 +10,11 @@ filename = sys.argv[1]
 
 editor = os.environ.get('EDITOR', 'vim')
 def delete():
+    """this will do something magic later"""
     threading.Timer(2.0, delete).start()
     with open(filename, 'rb+') as filehandle:
         filehandle.seek(-1, os.SEEK_END)
         filehandle.truncate()
 
 if __name__ == "__main__":
-   delete() 
+   delete()

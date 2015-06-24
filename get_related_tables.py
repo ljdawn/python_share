@@ -6,7 +6,7 @@ import pprint
 
 """
 this file help u to find the related (foreign table) to the specified table
-it's for django
+it's for django orm
 """
 
 ##TODO  update the specified table and then change the relational tables
