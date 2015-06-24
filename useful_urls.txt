@@ -10,3 +10,4 @@ http://penguindreams.org/blog/signature-verification-between-java-and-python/  #
 http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
 http://nqdeng.github.io/7-days-nodejs/  ## nodejs tutorial
 http://www.pydanny.com/overloading-form-fields.html  ## django init kwargs
+http://norvig.com/21-days.html  ## about how to be a better programmer

@@ -12,19 +12,29 @@ import base64
 
 req = requests.session()
 payload = json.dumps({"user_id":123,"agency_id":"NONE","exp":"2015-09-09"})
-key_file = "~/Asa/ssh/id_rsa"
+key_file = "/home/Asa/ssh/id_rsa"
 private_key = EVP.load_key(key_file)
 private_key.reset_context(md='sha1')
 private_key.sign_init()
 private_key.sign_update(payload)
-signature = base64.b64encode(key.sign_final())
+signature = base64.b64encode(private_key.sign_final())
 
 headers = {"payload":payload, "token":signature}
 url = "http://192.168.1.81:8004%s"
+jwt_url = "https://agency-stage.nixle.com/api/publication_jwt/30541/"
 
-def requests(url):
+def jwt_request(url):
+    req = requests.session()
+    req.get(url, headers = headers)
+    print req.content
+
+def request(url):
+    req = requests.session()
     file = io.open("README.rst", "rb")
     files = {"file":file}
     req = requests.session()
     request = req.post(url%("api/user/agencies/"), files=files, stream = True)
     print request.content
+
+if __name__ == 'main':
+    pass
