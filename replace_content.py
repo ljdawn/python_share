@@ -39,7 +39,7 @@ for html_file in html_files:
                     rep_str = flag.groups()[2]
                     new_line = flag.groups()[0] + '{% url "' + flag.groups()[2] +\
                                                   '" %}' + flag.groups()[3]
-                    print new_line
+                    newfile.write(new_line)
     os.close(fh)
     os.remove(html_file)
     move(abs_path, html_file)
