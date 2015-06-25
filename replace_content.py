@@ -40,6 +40,11 @@ for html_file in html_files:
                     new_line = flag.groups()[0] + '{% url "' + flag.groups()[2] +\
                                                   '" %}' + flag.groups()[3]
                     newfile.write(new_line)
+                    newfile.write('\n')
+                else:
+                    newfile.write(line)
+                    newfile.write('\n')
+
     os.close(fh)
     os.remove(html_file)
     move(abs_path, html_file)
