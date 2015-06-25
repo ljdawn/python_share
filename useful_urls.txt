@@ -16,3 +16,4 @@ http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
 http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
 http://www.kzx123.com/?p=137  ## django async
 http://learnyouahaskell.com/chapters  ## haskell
+http://www.lijiejie.com/set-up-svn-server-under-ubuntu/  ## 自动化部署
