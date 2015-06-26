@@ -26,7 +26,7 @@ for root, dirs, files in os.walk("%s"%paths):
         if file.endswith(".html") or file.endswith(".htm"):
             html_files.append(os.path.join(root, file))
 
-# FIXME if url has args
+# FIXME if several urls in line?
 for html_file in html_files:
     #Create temp file
     fh, abs_path = mkstemp()
