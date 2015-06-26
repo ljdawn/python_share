@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 """
-    thif file convert url to "url"
+    this file convert url to "url"
     update django 1.2.7 to 1.8
 """
 
@@ -12,8 +12,7 @@ import sys
 from tempfile import mkstemp
 from shutil import move
 
-pattern = re.compile(r"(.*?)({%\s*url\s*(.*?)\s*%})(.*)")
-pattern_to = '{% url "%s" %}'
+pattern = re.compile(r"(.*?)({%\s*url\s*(\S*)?\s*(.*?)%})(.*)")
 
 if len(sys.argv) != 2:
     print "usage: python replace_content.py ${paths}"
@@ -27,27 +26,28 @@ for root, dirs, files in os.walk("%s"%paths):
         if file.endswith(".html") or file.endswith(".htm"):
             html_files.append(os.path.join(root, file))
 
+# FIXME if url has args
 for html_file in html_files:
     #Create temp file
     fh, abs_path = mkstemp()
     with open(abs_path, "w") as newfile:
         with open(html_file, 'r') as file:
             for line in file:
-                flag = pattern.match(line)
-                if flag and not (flag.groups()[1].startswith('"') or\
-                                 flag.groups()[1].startswith("'")):
-                    rep_str = flag.groups()[2]
-                    new_line = flag.groups()[0] + '{% url "' + flag.groups()[2] +\
-                                                  '" %}' + flag.groups()[3]
+                if line == '\n':
+                    continue
+                matchs = pattern.match(line)
+                if matchs and not (matchs.groups()[2].startswith('"') or\
+                                 matchs.groups()[2].startswith("'")):
+                    new_line = matchs.groups()[0] + '{% url "' + matchs.groups()[2] +\
+                               '" ' + matchs.groups()[3] + '%}' + matchs.groups()[4] + '\n'
+                    rep_str = matchs.groups()[2]
                     newfile.write(new_line)
-                    newfile.write('\n')
                 else:
                     newfile.write(line)
-                    newfile.write('\n')
 
     os.close(fh)
     os.remove(html_file)
     move(abs_path, html_file)
 
-if __name__  == "__main__":
+if __name__ == "__main__":
     pass
