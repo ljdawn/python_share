@@ -17,3 +17,4 @@ http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
 http://www.kzx123.com/?p=137  ## django async
 http://learnyouahaskell.com/chapters  ## haskell
 http://www.lijiejie.com/set-up-svn-server-under-ubuntu/  ## 自动化部署
+https://www.seedinvest.com/labs/backend/upgrading-from-django-1-4-to-django-1-7/
