@@ -1,5 +1,5 @@
 We are upgrading the project from django1.2.7 to django1.8
-<br\>
+<br>
 this file will record what we are making to migrations
 
 1.url retrives:
