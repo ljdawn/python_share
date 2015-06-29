@@ -28,17 +28,26 @@ for root, dirs, files in os.walk("%s"%from_paths):
                                        file.endswith(".htm")):
             html_files.append(os.path.join(root, file))
 
+if to_paths == "findsomething/":
+    for html in html_files:
+        with open(html, "r") as file:
+            for line in file:
+                if line.strip().startswith("{% load staticfiles"):
+                    print html
+    sys.exit()
+
 # change file to relative paths
-for html in html_files:
-    pprint.pprint(html)
-    to_html = to_paths + '/'.join(html.split('/')[5:])
-    if not os.path.exists(to_html):
-        try:
-            to_html = to_html.replace("media", "static")
-            file = open(to_html, "w")
-            file.close()
-        except:print "what the hell"
-    copy2(html, to_html)
+#if os.path.isdir(to_paths):
+#    for html in html_files:
+#        pprint.pprint(html)
+#        to_html = to_paths + '/'.join(html.split('/')[5:])
+#        if not os.path.exists(to_html):
+#            try:
+#                to_html = to_html.replace("media", "static")
+#                file = open(to_html, "w")
+#                file.close()
+#            except:print "what the hell"
+#        copy2(html, to_html)
 
 if __name__ == "__main__":
     pass

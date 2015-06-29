@@ -16,9 +16,10 @@ from shutil import move
 from lxml import etree
 
 # "href" line startswith "<link", "src" line startswith "<script"
-pattern = { r"url" : r"(.*?)({%\s*url\s*(\S*)?\s*(.*?)%})(.*)",
-            r"href": r'(.*?)(href="\s?{{\s?MEDIA_URL\s?}})(.*?)"(.*)',
-            r"src" : r'(.*?)(src="\s?{{\s?MEDIA_URL\s?}})(.*?)"(.*)',
+pattern = { r"url"  : r"(.*?)({%\s*url\s*(\S*)?\s*(.*?)%})(.*)",
+            r"href" : r'(.*?)(href="\s?{{\s?MEDIA_URL\s?}})(.*?)"(.*)',
+            r"src"  : r'(.*?)(src="\s?{{\s?MEDIA_URL\s?}})(.*?)"(.*)',
+            r"start": r'^{%\s?extends.*?',
           }
 
 for pat in pattern:
@@ -26,7 +27,7 @@ for pat in pattern:
 
 if len(sys.argv) != 3:
     print "usage: python update_urls_reverse.py ${paths} {replace_type}\n\
-          {0:update urls reverse, 1:media ro static}"
+            {0:update urls reverse, 1:media to static, 2:changelocation}"
     sys.exit()
 
 paths = sys.argv[1]
@@ -36,7 +37,7 @@ except:
     print "bad argv"
     sys.exit()
 
-TYPE = {0:"URL", 1:"STATIC"}
+TYPE = {0:"URL", 1:"STATIC", 2:"CHANGELOC"}
 html_files = []
 
 for root, dirs, files in os.walk("%s"%paths):
@@ -49,6 +50,7 @@ for html_file in html_files:
     fh, abs_path = mkstemp()
     with open(abs_path, "w") as newfile:
         with open(html_file, 'r') as file:
+            line_no = 0
             if TYPE.get(type) == "URL":
                 for line in file:
                     if line == '\n':
@@ -65,6 +67,7 @@ for html_file in html_files:
                         newfile.write(line)
             elif TYPE.get(type) == "STATIC":
                 # TODO link, src
+                # ur error new way to fix, whatever
                 newfile.write("{% load staticfiles %}\n")
                 for line in file:
                     if line == '\n':
@@ -87,6 +90,14 @@ for html_file in html_files:
                             newfile.write(line)
                     else:
                         newfile.write(line)
+            elif TYPE.get(type) == "CHANGELOC":
+                lines = file.readlines()
+                if len(set(lines[:2])) == 1:
+                    lines = lines[1:] ## forgot when done something bad?
+                if len(lines)>1 and pattern["start"].match(lines[1].strip()):
+                    lines[0], lines[1] = lines[1], lines[0]
+                for line in lines:
+                    newfile.write(line)
 
     os.close(fh)
     os.remove(html_file)
