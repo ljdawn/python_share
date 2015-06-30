@@ -26,8 +26,11 @@ for pat in pattern:
     pattern[pat] = re.compile(pattern[pat])
 
 if len(sys.argv) != 3:
-    print "usage: python update_urls_reverse.py ${paths} {replace_type}\n\
-            {0:update urls reverse, 1:media to static, 2:changelocation}"
+    print "usage: python update_patterns.py ${paths} {replace_type}\n\
+            {0:update urls reverse, \n\
+             1:media to static, \n\
+             2:changelocation, \n\
+             3:href of script to src}"
     sys.exit()
 
 paths = sys.argv[1]
@@ -37,7 +40,7 @@ except:
     print "bad argv"
     sys.exit()
 
-TYPE = {0:"URL", 1:"STATIC", 2:"CHANGELOC"}
+TYPE = {0:"URL", 1:"STATIC", 2:"CHANGELOC", 3:"HREF2SRC"}
 html_files = []
 
 for root, dirs, files in os.walk("%s"%paths):
@@ -83,7 +86,7 @@ for html_file in html_files:
                     elif line.strip().startswith("<script"):
                         matchs = pattern["src"].match(line)
                         if matchs:
-                            line = matchs.groups()[0] + 'href="{% static \"' + \
+                            line = matchs.groups()[0] + 'src="{% static \"' + \
                                    matchs.groups()[2] + '\" %}"' + matchs.groups()[3]
                             newfile.write(line)
                         else:
@@ -98,6 +101,12 @@ for html_file in html_files:
                     lines[0], lines[1] = lines[1], lines[0]
                 for line in lines:
                     newfile.write(line)
+            elif TYPE.get(type) == "HREF2SRC": ## FIXME your error
+                for line in file:
+                    if line.strip().startswith("<script"):
+                        newfile.write(line.replace("href=", "src="))
+                    else:
+                        newfile.write(line)
 
     os.close(fh)
     os.remove(html_file)

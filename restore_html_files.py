@@ -37,17 +37,17 @@ if to_paths == "findsomething/":
     sys.exit()
 
 # change file to relative paths
-#if os.path.isdir(to_paths):
-#    for html in html_files:
-#        pprint.pprint(html)
-#        to_html = to_paths + '/'.join(html.split('/')[5:])
-#        if not os.path.exists(to_html):
-#            try:
-#                to_html = to_html.replace("media", "static")
-#                file = open(to_html, "w")
-#                file.close()
-#            except:print "what the hell"
-#        copy2(html, to_html)
+if os.path.isdir(to_paths):
+    for html in html_files:
+        pprint.pprint(html)
+        to_html = to_paths + '/'.join(html.split('/')[5:])
+        if not os.path.exists(to_html):
+            try:
+                to_html = to_html.replace("media", "static")
+                file = open(to_html, "w")
+                file.close()
+            except:print "what the hell"
+        copy2(html, to_html)
 
 if __name__ == "__main__":
     pass
