@@ -22,12 +22,17 @@ this file will record what we are making to migrations
     )
 
 4.crfs_token
-  add {% crfs_token%} for forms.submit
+  add {% crfs_token%} for forms.submit and view function
+  BUT!!!!!!! there should be a better way
 
 5.messages
   user.message_set.add() -> messages.add_message(request, messages.INFO, messages)
   TODO
   * from django.contrib import messages
 
-5.json
+6.adminmedia
+  django1.5 had deprecated adminmedia 
+
+7.json
   import simplejson -> import json
+
