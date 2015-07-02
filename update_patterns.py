@@ -93,7 +93,7 @@ def update_url(file, newfile = None):
 
 def update_static(file, newfile = None):
     """
-        update static patters 1.2->1.8
+        update static patterns 1.2->1.8
 
     """
     # TODO link, src
