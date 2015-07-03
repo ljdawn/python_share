@@ -25,3 +25,4 @@ http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
 http://stackoverflow.com/questions/30050634/django-templatedoesnotexist-error-but-using-loader-django-template-loaders-a
 https://djangosnippets.org/snippets/2607/  ## add decorator for urls
 https://djangosnippets.org/snippets/2532/
+http://stackoverflow.com/questions/2307926/is-it-possible-to-decorate-include-in-django-urls-with-login-required

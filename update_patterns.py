@@ -67,7 +67,7 @@ def update_url(file, newfile = None):
     """
     file = open(file, "r")
     if debug:
-        for line in line:
+        for line in file:
             matchs = pattern["url"].match(line)
             # FIXME if several urls in line?
             if matchs and not (matchs.groups()[2].startswith('"') or\
