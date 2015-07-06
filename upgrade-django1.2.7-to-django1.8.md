@@ -48,3 +48,5 @@ this file will record what we are making to migrations
 
 10.PROFANITIES_LIST,mimetype  
   deprecated 
+
+11. get_query_set -> get_queryset
