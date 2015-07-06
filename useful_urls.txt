@@ -27,3 +27,6 @@ https://djangosnippets.org/snippets/2607/  ## add decorator for urls
 https://djangosnippets.org/snippets/2532/
 http://stackoverflow.com/questions/2307926/is-it-possible-to-decorate-include-in-django-urls-with-login-required
 http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
+http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
+http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
+http://deeplearning.net/tutorial/
