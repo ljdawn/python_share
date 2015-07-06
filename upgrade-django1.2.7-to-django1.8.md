@@ -7,7 +7,7 @@ this file will record what we are making to migrations
 
 2.json, image
   import simplejson -> import json
-  pil -> image
+  pil -> image/pillow
 
 3.url retrives:
   {% url view_name args %} -> {% url 'view_name' args %}
@@ -43,10 +43,8 @@ this file will record what we are making to migrations
   django1.5 had deprecated adminmedia 
 
 9.auto_now & default
-  in django1.3, we used auto_now and default in model together(sometimes)  
-
+  in django1.3, we used auto_now and default in model together  
   in django1.8, just use auto_now
 
-10.PROFANITIES_LIST  
-
- deprecated 
+10.PROFANITIES_LIST,mimetype  
+  deprecated 
