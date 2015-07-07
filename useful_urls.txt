@@ -2,57 +2,58 @@
 ###  I'm not sure if I should get the screenshot of the pages?
 
 alg:
-http://daoluan.net/blog/sort/   ## stl algs
-https://app.wmcloud.com/mercury/community/  ##quantum
-http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
-http://deeplearning.net/tutorial/
+  http://daoluan.net/blog/sort/   ## stl algs
+  https://app.wmcloud.com/mercury/community/  ##quantum
+  http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
+  http://deeplearning.net/tutorial/
 
 #####################################################################
 
 python:
-http://lazynight.me/blog/  ## python
-http://stackoverflow.com/questions/15556718/greenlet-vs-threads
-http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
-http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
+  http://lazynight.me/blog/  ## python
+  http://stackoverflow.com/questions/15556718/greenlet-vs-threads
+  http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
+  http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
 
 #####################################################################
 
 django:
-http://www.weiguda.com/blog/    ## django async
-http://www.pydanny.com/overloading-form-fields.html  ## django init kwargs
-http://www.kzx123.com/?p=137  ## django async
-https://www.seedinvest.com/labs/backend/upgrading-from-django-1-4-to-django-1-7/
-http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/
-http://andrewsforge.com/presentation/upgrading-django-to-17/
-http://stackoverflow.com/questions/30050634/django-templatedoesnotexist-error-but-using-loader-django-template-loaders-a
-https://djangosnippets.org/snippets/2607/  ## add decorator for urls
-https://djangosnippets.org/snippets/2532/
-http://stackoverflow.com/questions/2307926/is-it-possible-to-decorate-include-in-django-urls-with-login-required
-http://stackoverflow.com/questions/238081/how-do-you-log-server-errors-on-django-sites
-http://www.isaced.com/post-248.html  ## django-gunicom-nginx
-http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
+  http://www.weiguda.com/blog/    ## django async
+  http://www.pydanny.com/overloading-form-fields.html  ## django init kwargs
+  http://www.kzx123.com/?p=137  ## django async
+  https://www.seedinvest.com/labs/backend/upgrading-from-django-1-4-to-django-1-7/
+  http://andrewsforge.com/article/upgrading-django-to-17/part-4-upgrade-strategies/
+  http://andrewsforge.com/presentation/upgrading-django-to-17/
+  http://stackoverflow.com/questions/30050634/django-templatedoesnotexist-error-but-using-loader-django-template-loaders-a
+  https://djangosnippets.org/snippets/2607/  ## add decorator for urls
+  https://djangosnippets.org/snippets/2532/
+  http://stackoverflow.com/questions/2307926/is-it-possible-to-decorate-include-in-django-urls-with-login-required
+  http://stackoverflow.com/questions/238081/how-do-you-log-server-errors-on-django-sites
+  http://www.isaced.com/post-248.html  ## django-gunicom-nginx
+  http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
 
 #####################################################################
 
 server:
-http://wiki.nginx.org/NginxChs  ## nginx
+  http://wiki.nginx.org/NginxChs  ## nginx
 
 #####################################################################
 
 deploy:
-http://www.lijiejie.com/set-up-svn-server-under-ubuntu/  ## 自动化部署
-http://projects.unbit.it/uwsgi/wiki/Example  ## deploy python project
+  http://www.lijiejie.com/set-up-svn-server-under-ubuntu/  ## 自动化部署
+  http://projects.unbit.it/uwsgi/wiki/Example  ## deploy python project
 
 #####################################################################
 
 others:
-http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## signature between python and java 
-http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
-http://nqdeng.github.io/7-days-nodejs/  ## nodejs tutorial
-http://norvig.com/21-days.html  ## about how to be a better programmer
-http://howtoprogrambetter.com/10-steps-to-become-a-senior-software-engineer/ 
-http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
-http://learnyouahaskell.com/chapters  ## haskell
-http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
-http://c.biancheng.net/cpp/u/jiaocheng/  ## c language
-http://www.weiguda.com/blog/41/
+  http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## signature between python and java 
+  http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
+  http://nqdeng.github.io/7-days-nodejs/  ## nodejs tutorial
+  http://norvig.com/21-days.html  ## about how to be a better programmer
+  http://howtoprogrambetter.com/10-steps-to-become-a-senior-software-engineer/ 
+  http://peternixey.com/post/83510597580/how-to-be-a-great-software-developer
+  http://learnyouahaskell.com/chapters  ## haskell
+  http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort
+  http://c.biancheng.net/cpp/u/jiaocheng/  ## c language
+  http://www.weiguda.com/blog/41/
+  http://codereview.stackexchange.com/
