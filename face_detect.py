@@ -2,8 +2,8 @@
 #-*- coding=utf-8 -*-
 
 import os
-from PIL import Image, ImageDraw
 import cv
+from PIL import Image, ImageDraw
 
 def detect_object(image):
     """

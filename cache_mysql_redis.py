@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#! /usr/bin/python
 
 # Author  : Fajri Abdillah a.k.a clasense4
 # Twitter : @clasense4

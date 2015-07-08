@@ -16,6 +16,7 @@ python:
   http://stackoverflow.com/questions/15556718/greenlet-vs-threads
   http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
   http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
+  http://jessenoller.com/good-to-great-python-reads/
 
 #####################################################################
 
