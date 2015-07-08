@@ -48,9 +48,8 @@ for fl in fl_lst[fl_type]:
         else:
             for line in file:
                 line_no += 1
-                if not line.strip().startswith("#") and "message_set" in line:
-                    print fl, line_no
-                if not line.strip().startswith("#") and "get_and_delete_messages" in line:
+                if not line.strip().startswith("#") and ("message_set" in line or \
+                                                         "get_and_delete_messages" in line):
                     print fl, line_no
 
 for relation in relations:

@@ -7,11 +7,12 @@ alg:
   http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
   http://deeplearning.net/tutorial/
   http://www.ibm.com/developerworks/cn/opensource/os-pythonnltk/index.html
+  http://www.extreme-learning-machines.org/
 
 #####################################################################
 
 python:
-  http://lazynight.me/blog/  ## python
+  http://lazynight.me/blog/  ## python & algs
   http://stackoverflow.com/questions/15556718/greenlet-vs-threads
   http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
   http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
@@ -32,6 +33,7 @@ django:
   http://stackoverflow.com/questions/238081/how-do-you-log-server-errors-on-django-sites
   http://www.isaced.com/post-248.html  ## django-gunicom-nginx
   http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
+  http://django-china.cn/topic/151/?page=1#p726  ## django signal
 
 #####################################################################
 
