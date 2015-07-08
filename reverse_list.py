@@ -16,7 +16,7 @@ class Reverse(object):
         try:
             data =  raw_input()
             if data is not '!':
-                self.head = Node(int(data))   #指向第一个节点
+                self.head = Node(int(data))
             p = self.head
             while data != '!':
                 data = raw_input()
@@ -28,13 +28,13 @@ class Reverse(object):
         except ValueError:
             print "input error!"
         finally:
-            print "输入结束！"
+            print "end"
 
     def rever(self):
         self.initlist()
-        p = self.head   #指链表的第一个节点
+        p = self.head
         nex = self.head.next
-        pre = Node(0)     #设置一个空节点，让链表的头节点指向它
+        pre = Node(0)
 
         while self.head.next != 0:
             nex = self.head.next
@@ -43,16 +43,14 @@ class Reverse(object):
             self.head = nex
         self.head.next = pre
         pre = self.head
-        ###
         #debug
-        print "逆序输出节点:\t",
+        print "reverse\t",
         while pre.next != 0:
             print pre.data,
             pre = pre.next
-        ###
 
 if __name__ == '__main__':
-    #测试数据
-    #data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    # test data
+    # data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     l = Reverse()
     l.rever()

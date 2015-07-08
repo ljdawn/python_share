@@ -9,6 +9,8 @@ id_rsa
 # C extensions
 *.so
 
+.*
+
 # Distribution / packaging
 .Python
 .ssh/

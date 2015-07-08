@@ -32,7 +32,6 @@ def request(url):
     req = requests.session()
     file = io.open("README.rst", "rb")
     files = {"file":file}
-    req = requests.session()
     request = req.post(url%("api/user/agencies/"), files=files, stream = True)
     print request.content
 

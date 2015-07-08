@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+
 """
 from http://www.oschina.net/code/snippet_1180874_27326
 """

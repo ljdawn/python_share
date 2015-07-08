@@ -6,6 +6,7 @@ alg:
   https://app.wmcloud.com/mercury/community/  ##quantum
   http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
   http://deeplearning.net/tutorial/
+  http://www.ibm.com/developerworks/cn/opensource/os-pythonnltk/index.html
 
 #####################################################################
 
@@ -57,3 +58,5 @@ others:
   http://c.biancheng.net/cpp/u/jiaocheng/  ## c language
   http://www.weiguda.com/blog/41/
   http://codereview.stackexchange.com/
+  http://www.erlang-cn.org/
+  http://gashero.iteye.com/blog/2075324  ## swift
