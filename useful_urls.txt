@@ -19,6 +19,11 @@ python:
   http://jessenoller.com/good-to-great-python-reads/
 
 #####################################################################
+erlang:
+  http://www.erlang.org/course/course.html
+  http://www.erlang-cn.org/
+
+#####################################################################
 
 django:
   http://www.weiguda.com/blog/    ## django async
@@ -35,6 +40,7 @@ django:
   http://www.isaced.com/post-248.html  ## django-gunicom-nginx
   http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
   http://django-china.cn/topic/151/?page=1#p726  ## django signal
+  http://hackerxu.com/Twd/#1-twd17
 
 #####################################################################
 
@@ -61,5 +67,4 @@ others:
   http://c.biancheng.net/cpp/u/jiaocheng/  ## c language
   http://www.weiguda.com/blog/41/
   http://codereview.stackexchange.com/
-  http://www.erlang-cn.org/
   http://gashero.iteye.com/blog/2075324  ## swift
