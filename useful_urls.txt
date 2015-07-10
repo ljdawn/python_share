@@ -8,6 +8,7 @@ alg:
   http://deeplearning.net/tutorial/
   http://www.ibm.com/developerworks/cn/opensource/os-pythonnltk/index.html
   http://www.extreme-learning-machines.org/
+  http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm # in python
 
 #####################################################################
 
@@ -46,6 +47,8 @@ django:
 
 server:
   http://wiki.nginx.org/NginxChs  ## nginx
+  https://www.nginx.com/blog/http-keepalives-and-web-performance/
+  http://selleo.com/blog/technologies/web-technologies-for-speed-up/
 
 #####################################################################
 
@@ -68,3 +71,5 @@ others:
   http://www.weiguda.com/blog/41/
   http://codereview.stackexchange.com/
   http://gashero.iteye.com/blog/2075324  ## swift
+  https://www.digitalocean.com/community/tutorials/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps
+  http://www.jianshu.com/p/2f7773ebb9f1  # rabbitmq
