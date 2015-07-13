@@ -18,11 +18,14 @@ python:
   http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/
   http://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python
   http://jessenoller.com/good-to-great-python-reads/
+  http://blog.jobbole.com/67009/  ## language interpreter
+  http://www.xuyukun.com/category/aticle/python/
 
 #####################################################################
 erlang:
   http://www.erlang.org/course/course.html
   http://www.erlang-cn.org/
+  http://blog.yufeng.info/
 
 #####################################################################
 
@@ -73,3 +76,4 @@ others:
   http://gashero.iteye.com/blog/2075324  ## swift
   https://www.digitalocean.com/community/tutorials/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps
   http://www.jianshu.com/p/2f7773ebb9f1  # rabbitmq
+  http://www.coder4.com  ## blog
