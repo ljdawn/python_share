@@ -9,6 +9,8 @@ alg:
   http://www.ibm.com/developerworks/cn/opensource/os-pythonnltk/index.html
   http://www.extreme-learning-machines.org/
   http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm # in python
+  http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html
+  http://www.astro.washington.edu/users/vanderplas/Astr599/notebooks/
 
 #####################################################################
 
@@ -20,6 +22,7 @@ python:
   http://jessenoller.com/good-to-great-python-reads/
   http://blog.jobbole.com/67009/  ## language interpreter
   http://www.xuyukun.com/category/aticle/python/
+  https://rcc.fsu.edu/docs/high-performance-computing-python
 
 #####################################################################
 erlang:
@@ -45,6 +48,7 @@ django:
   http://stackoverflow.com/questions/4455330/why-does-declaring-a-manager-to-a-django-model-void-objects
   http://django-china.cn/topic/151/?page=1#p726  ## django signal
   http://hackerxu.com/Twd/#1-twd17
+  https://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/  ## django+celery
 
 #####################################################################
 
@@ -52,6 +56,7 @@ server:
   http://wiki.nginx.org/NginxChs  ## nginx
   https://www.nginx.com/blog/http-keepalives-and-web-performance/
   http://selleo.com/blog/technologies/web-technologies-for-speed-up/
+  http://drops.wooyun.org/tips/6570  # nginx and others
 
 #####################################################################
 
