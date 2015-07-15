@@ -55,3 +55,9 @@ this file will record what we are making to migrations
    deprecated 
 
 11. get_query_set -> get_queryset
+
+12. command - transaction.commit_manually -> transaction.atomic  
+    transaction decprete set_dirty
+
+13. AttributeError: class BILLING has no attribute 'SUBSCRIPTION_DONT_RENEW' ?
+    /home/Asa/svn/trunk/billing/management/commands/upgrade_biller.py

@@ -29,6 +29,7 @@ erlang:
   http://www.erlang.org/course/course.html
   http://www.erlang-cn.org/
   http://blog.yufeng.info/
+  http://learnyousomeerlang.com/content
 
 #####################################################################
 
