@@ -25,6 +25,11 @@ python:
   https://rcc.fsu.edu/docs/high-performance-computing-python
 
 #####################################################################
+
+openstack:
+  http://lingxiankong.github.io/
+
+#####################################################################
 erlang:
   http://www.erlang.org/course/course.html
   http://www.erlang-cn.org/
@@ -50,6 +55,7 @@ django:
   http://django-china.cn/topic/151/?page=1#p726  ## django signal
   http://hackerxu.com/Twd/#1-twd17
   https://www.caktusgroup.com/blog/2014/06/23/scheduling-tasks-celery/  ## django+celery
+  http://django-china.cn/wiki/resources/
 
 #####################################################################
 

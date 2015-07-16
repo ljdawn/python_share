@@ -1,5 +1,5 @@
-We are upgrading the project from django1.2.7 to django1.8
-<br>
+We are upgrading the project from django1.2.7 to django1.8  
+
 this file will record what we are making to migrations
 
 1.setting.py  
@@ -61,3 +61,7 @@ this file will record what we are making to migrations
 
 13. AttributeError: class BILLING has no attribute 'SUBSCRIPTION_DONT_RENEW' ?
     /home/Asa/svn/trunk/billing/management/commands/upgrade_biller.py
+
+14. 'FallbackStorage' object does not support indexing  
+   {% if messages|is_error_msg %} -> <p class="{% if messages.0.level == DEFAULT_MESSAGE_LEVELS.ERROR %}error{% else %}success{% endif %}"
+
