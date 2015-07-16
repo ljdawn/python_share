@@ -9,21 +9,6 @@ def ApiProtect(request):
     """
     return HttpResponse(json.dumps({ "code":"ok" }),content_type="application/json")
 
-# URL: /api/users/
-@jwt_required
-def ApiGetUsers(request):
-    """ this function get users on nixel
-    """
-    pass
-
-# URL: /api/user/agencies/
-@jwt_required
-def ApiGetAgencies(request):
-    """ this function get agencies of the specified user
-    """
-    pass
-
-
 #### belows are auth code ####
 def django_jwt_required(view_func):
     """ Check user's signature
@@ -41,16 +26,6 @@ def django_jwt_required(view_func):
                                     mimetype='application/json')
             user_id = payload.get("user_id", "")
             agency_id = payload.get("agency_id","")
-            ## get users
-            if user_id == "NONE":
-                users = User.objects.values("id", "username")
-                return HttpResponse(json.dumps({"code":"ok", "users":users}),
-                                    mimetype='application/json')
-            ## get agencies
-            if user_id and agency_id == "NONE":
-                agencies = User.agency_set.values("id", "name")
-                return HttpResponse(json.dumps({"code":"ok", "agencies":agencies}),
-                                    mimetype='application/json')
             exp_time = payload.get("exp","")
             now = datetime.datetime.utcnow()
             if exp_time and now < exp_time:

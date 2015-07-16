@@ -1,5 +1,4 @@
 We are upgrading the project from django1.2.7 to django1.8  
-
 this file will record what we are making to migrations
 
 1.setting.py  
@@ -29,29 +28,21 @@ this file will record what we are making to migrations
 
 6.crfs_token  
   add {% crfs_token%} for forms.submit and view function  
-
   can decorates all the urls in url.py
 
 7.messages
-
   user.message_set.add() -> messages.add_message(request, messages.INFO, messages)  
-
   TODO
-
   * from django.contrib import messages
 
 8.adminmedia
-
   django1.5 had deprecated adminmedia 
 
 9.auto_now & default
-
   in django1.3, we used auto_now and default in model together  
-
   in django1.8, just use auto_now
 
 10.PROFANITIES_LIST,mimetype  
-
    deprecated 
 
 11. get_query_set -> get_queryset
