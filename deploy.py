@@ -13,14 +13,14 @@ env.user = 'root'
 env.hosts = ['www.example.com'] # 如果有多个主机，fabric会自动依次部署
 
 def pack():
-    ' 定义一个pack任务 '
+    ''' 定义一个pack任务 '''
     # 打一个tar包：
     tar_files = ['*.py', 'static/*', 'templates/*', 'favicon.ico']
     local('rm -f example.tar.gz')
     local('tar -czvf example.tar.gz --exclude=\'*.tar.gz\' --exclude=\'fabfile.py\' %s' % ' '.join(tar_files))
 
 def deploy():
-    ' 定义一个部署任务 '
+    ''' 定义一个部署任务 '''
     # 远程服务器的临时文件：
     remote_tmp_tar = '/tmp/example.tar.gz'
     tag = datetime.now().strftime('%y.%m.%d_%H.%M.%S')
