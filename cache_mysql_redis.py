@@ -35,16 +35,16 @@ def cache_redis(sql, TTL = 36):
     hash = hashlib.sha224(sql).hexdigest()
     key = "sql_cache:" + hash
     print "Created Key\t : %s" % key
-   
+
     # Check if data is in cache.
     if (R_SERVER.get(key)):
-        print "This was return from redis"     
+        print "This was return from redis"
         return cPickle.loads(R_SERVER.get(key))
     else:
-        # Do MySQL query   
+        # Do MySQL query
         CURSOR.execute(sql)
         data = CURSOR.fetchall()
-       
+
         # Put data into cache for 1 hour
         R_SERVER.set(key, cPickle.dumps(data) )
         R_SERVER.expire(key, TTL)
