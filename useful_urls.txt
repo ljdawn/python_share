@@ -23,6 +23,8 @@ python:
   http://blog.jobbole.com/67009/  ## language interpreter
   http://www.xuyukun.com/category/aticle/python/
   https://rcc.fsu.edu/docs/high-performance-computing-python
+  http://www.fullstackpython.com/task-queues.html
+  http://www.kunxi.org/blog/2014/05/lru-cache-in-python/
 
 #####################################################################
 
@@ -90,4 +92,4 @@ others:
   http://www.jianshu.com/p/2f7773ebb9f1  # rabbitmq
   http://www.coder4.com  ## blog
   http://xiaorui.cc/2015/04/01/python-rq%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/ ## rq人物队列
-  http://www.fullstackpython.com/task-queues.html
+  http://blog.eood.cn/exception
