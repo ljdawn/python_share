@@ -9,7 +9,7 @@ id_rsa
 # C extensions
 *.so
 
-.*
+*.beam
 
 # Distribution / packaging
 .Python
