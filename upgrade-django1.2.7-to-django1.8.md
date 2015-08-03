@@ -56,3 +56,4 @@ this file will record what we are making to migrations
 14. 'FallbackStorage' object does not support indexing  
    {% if messages|is_error_msg %} -> <p class="{% if messages.0.level == DEFAULT_MESSAGE_LEVELS.ERROR %}error{% else %}success{% endif %}"
 
+15. mod_python -> wsgi
