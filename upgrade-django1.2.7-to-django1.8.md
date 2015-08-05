@@ -54,6 +54,7 @@ this file will record what we are making to migrations
     /home/Asa/svn/trunk/billing/management/commands/upgrade_biller.py
 
 14. 'FallbackStorage' object does not support indexing  
-   {% if messages|is_error_msg %} -> <p class="{% if messages.0.level == DEFAULT_MESSAGE_LEVELS.ERROR %}error{% else %}success{% endif %}"
+   {% if messages|is_error_msg %} -> <p class="{% if messages.0.level == DEFAULT_MESSAGE_LEVELS.ERROR %}error{% else %}success{% endif %}"  
+   bad way...
 
 15. mod_python -> wsgi
