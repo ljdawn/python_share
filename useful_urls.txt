@@ -109,3 +109,4 @@ others:
   http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html
   http://www.qmailer.net/archives/165.html
   https://www.textarea.com/
+  http://timyang.net/category/python/
