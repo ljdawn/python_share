@@ -2,13 +2,13 @@
 
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
-from app import app, db, lm, oid
-from .forms import LoginForm
+from app import app, db, lm
+from .forms import LoginForm, RegisterForm
 from .models import User
 
 @lm.user_loader
-def load_user(id):
-    return User.query.get(int(id))
+def load_user(userid):
+    return db.session.query(User).get(userid)
 
 @app.before_request
 def before_request():
@@ -29,44 +29,38 @@ def index():
             'body':'damn'
         }
         ]
-    return render_template('index.html',
+    return render_template('base.html',
         title = 'home',
         user = user,
         posts = posts)
 
 @app.route("/login", methods = ["get", "post"])
-@oid.loginhandler
 def login():
-    if g.user is not None and g.user.is_authenticated():
-        return redirect(url_for("/index"))
-    form = LoginForm()
+    form = LoginForm(request.form)
     if form.validate_on_submit():
-        session["remember_me"] = form.remember_me.data
-        return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
+        session["userid"] = form.user.id
+        #login_user(session["user_id"])
+        return redirect(url_for("index"))
     return render_template("login.html",
                            title = "sign in",
                            form = form,
-                           providers = app.config['OPENID_PROVIDERS'])
+                           )
 
-@oid.after_login
-def after_login(resp):
-    if resp.emial is None or resp.email == "":
-        flash("invalid")
-        return redirect(url_for("login"))
-    user = User.query.filter_by(email=resp.email).first()
-    if user is None:
-        nickname = resp.nickname
-        if nickname is None or nickname == "":
-            nickname = resp.email.split("@")[0]
-        user = User(nickname=nickname, email=resp.email)
+@app.route("/register", methods = ["get", "post"])
+def register():
+    form = RegisterForm(request.form)
+    if request.method == "POST" and form.validate_on_submit():
+        user = User(username = form.username.data,
+                    password = form.password.data,
+                    email    = form.email.data)
         db.session.add(user)
         db.session.commit()
-    remember_me = False
-    if "remember_me" in session:
-        remember_me = session["remember_me"]
-        session.pop("remember_me", None)
-    login_user(user, remember = remember_me)
-    return redirect(request.args.get('next') or url_for('index'))
+        session["remember_me"] = form.remember_me.data
+        return redirect(request.args.get("next") or url_for("index"))
+    return render_template("register.html",
+                           title = "sign in",
+                           form = form,
+                           )
 
 @app.route("/logout")
 def logout():

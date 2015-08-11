@@ -1,0 +1,24 @@
+body
+   {
+    font-size:14px;
+    font-family:宋体;
+    text-align：center；
+    background-color：#F7F7F7；
+   }						     
+
+#nav
+   {
+    width：740px；
+    height:30px;
+    margin-top：0px；
+    margin-left：auto；
+    margin-right：auto；
+    }
+
+#maindiv
+   {
+    width：740px；
+    margin-top：0px；
+    margin-left：auto；
+    margin-right：auto；
+    }

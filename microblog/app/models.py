@@ -4,9 +4,11 @@ from app import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    nickname = db.Column(db.String(64), index = True, unique = True)
+    username = db.Column(db.String(64), index = True, unique = True)
+    password = db.Column(db.String(64))
     email = db.Column(db.String(120), index = True, unique = True)
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    avatar = db.Column(db.String(120))
 
     def is_authenticated(self):
         return True
@@ -18,10 +20,12 @@ class User(db.Model):
         return False
 
     def get_id(self):
-        try:
-            return unicode(self.id)  # python 2
-        except NameError:
-            return str(self.id)  # python 3
+        return self.id
+
+    def check_password(self, password):
+        if self.password != password:
+            return False
+        return True
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
