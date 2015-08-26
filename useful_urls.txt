@@ -16,6 +16,8 @@ alg:
   http://pythonhackers.com/p/vinta/awesome-python
   http://www.codelast.com/?page_id=963
   https://www.metacademy.org/list
+  http://www.jzsyz.jzedu.cn/xxjs/suanfa/index.html
+  http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm
 
 #####################################################################
 
@@ -115,3 +117,4 @@ others:
   http://www.csdn.net/article/2014-12-08/2823019-DevOps
   http://www.devopsbookmarks.com/linux
   http://bindog.github.io/blog/2015/04/20/other-way-to-collect-sina-data/
+  http://blog.codinglabs.org/  ## alg
