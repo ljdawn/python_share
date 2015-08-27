@@ -1,23 +1,29 @@
 ###  keep some useful urls here
-###  I'm not sure if I should get the screenshot of the pages?
+
+#####################################################################
 
 alg:
   http://daoluan.net/blog/sort/   ## stl algs
-  https://app.wmcloud.com/mercury/community/  ##quantum
   http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html
   http://deeplearning.net/tutorial/
   http://www.ibm.com/developerworks/cn/opensource/os-pythonnltk/index.html
-  http://www.extreme-learning-machines.org/
   http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm # in python
-  http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html
-  http://www.astro.washington.edu/users/vanderplas/Astr599/notebooks/
-  http://blog.niubua.com/   ## ml
   http://pydata.org/nyc2014/abstracts/
   http://pythonhackers.com/p/vinta/awesome-python
   http://www.codelast.com/?page_id=963
   https://www.metacademy.org/list
   http://www.jzsyz.jzedu.cn/xxjs/suanfa/index.html
   http://www.math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/index.htm
+  http://blog.codinglabs.org/  ## alg
+
+#####################################################################
+
+Machine Learning:
+  https://app.wmcloud.com/mercury/community/  ##quantum
+  http://www.extreme-learning-machines.org/
+  http://blog.niubua.com/   ## ml
+  http://www.astro.washington.edu/users/vanderplas/Astr599/notebooks/
+  http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html
 
 #####################################################################
 
@@ -47,6 +53,7 @@ openstack:
   http://ilearnstack.com/openstack/
 
 #####################################################################
+
 erlang:
   http://www.erlang.org/course/course.html
   http://www.erlang-cn.org/
@@ -90,6 +97,16 @@ deploy:
 
 #####################################################################
 
+job queues:
+  https://www.digitalocean.com/community/tutorials/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps
+  http://www.jianshu.com/p/2f7773ebb9f1  # rabbitmq
+  http://xiaorui.cc/2015/04/01/python-rq%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/ ## rq
+  http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis
+  http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html
+  http://www.qmailer.net/archives/165.html
+
+#####################################################################
+
 others:
   http://penguindreams.org/blog/signature-verification-between-java-and-python/  ## signature between python and java 
   http://blog.oddbit.com/2011/05/08/converting-openssh-public-keys/  ## convert ssh-keygen public key to pkcs1
@@ -103,18 +120,11 @@ others:
   http://www.weiguda.com/blog/41/
   http://codereview.stackexchange.com/
   http://gashero.iteye.com/blog/2075324  ## swift
-  https://www.digitalocean.com/community/tutorials/how-to-use-celery-with-rabbitmq-to-queue-tasks-on-an-ubuntu-vps
-  http://www.jianshu.com/p/2f7773ebb9f1  # rabbitmq
   http://www.coder4.com  ## blog
-  http://xiaorui.cc/2015/04/01/python-rq%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97/ ## rq
   http://blog.eood.cn/exception
-  http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis
-  http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html
-  http://www.qmailer.net/archives/165.html
   https://www.textarea.com/
   http://timyang.net/category/python/
   http://wiki.swarma.net/index.php/%E9%A6%96%E9%A1%B5
   http://www.csdn.net/article/2014-12-08/2823019-DevOps
   http://www.devopsbookmarks.com/linux
   http://bindog.github.io/blog/2015/04/20/other-way-to-collect-sina-data/
-  http://blog.codinglabs.org/  ## alg
