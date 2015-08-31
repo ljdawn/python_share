@@ -1,0 +1,24 @@
+version:
+  id:
+    type:
+      int       
+    nullable:
+      no
+    default:
+      ""
+    key:
+      pri
+  name:
+    type:
+      varchar(10)       
+    nullable:
+      yes 
+    default:
+      ""
+  version:
+    type:
+      int         
+    nullable:
+      no
+    default:
+      ""
