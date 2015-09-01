@@ -1,13 +1,15 @@
 #! /usr/bin/env python
 
 """
-    this script migrate Model to sql
+    this script update mysql scheme
     work for sqlalchemy, peewee, etc.
     just a simple one ,without foreign key ,manytomany, ...etc
 """
 
 import os
 import re
+import sys
+import argparse
 from itertools import groupby
 import yaml
 import MySQLdb
@@ -26,6 +28,12 @@ try:
 except Exception, e:
     print e
 
+parser = argparse.ArgumentParser(prog="python %s"%os.path.dirname(__file__),
+                                 usage='%(prog)s [options]')
+parser.add_argument("-f", help=" 'F' or 'f' force to update")
+args = parser.parse_args()
+UPDATE = True if args.get("f") in ("f", "F") else False
+
 try:
     """'version': {'version': {'default': '', 'type': 'int', 'nullable':False},
                    'id': {'default': '', 'type': 'int', 'key': 'pri', 'nullable':False},
@@ -38,11 +46,14 @@ except:
 
 col_type = re.compile(r"(.*?int(.*)|.*?char(.*)|.*?text(.*))", re.IGNORECASE)
 
-def null_transfer(type, null):
-    if "int" in type and null == "no":
+def null_default(type, nullable, default=''):
+    # set default value
+    if default:
+        return default
+    elif "int" in type and nullable:
         return "0"
     else:
-        return ""
+        return "NULL"
 
 cur = conn.cursor()
 cur.execute("show tables")
@@ -60,7 +71,7 @@ for table in tables:
 
 for schema in yaml_schemas:
     # we don't do the delete
-    # we set primary id auto_increment
+    # default id as  primary key, auto_increment
     yaml_table = yaml_schemas[schema]
     if schema in sql_schemas:
         print "update table: %s"%(schema)
@@ -74,16 +85,17 @@ for schema in yaml_schemas:
                         sql = "alter table %s modify %s %s"%(schema, col,\
                                                              yaml_table[col]["type"])
                         print sql
-                        cur.execute(sql)
-                    elif not flag.groups()[1]:
+                        if UPDATE:
+                            cur.execute(sql)
+                    elif not flag.groups()[1] or flag.groups()[1] or flag.groups()[1]:  # with default length
                         sql = "alter table %s modify %s %s"%(schema, col,\
                                                              yaml_table[col]["type"])
                         print sql
-                        cur.execute(sql)
+                        if UPDATE:
+                            cur.execute(sql)
                 else:
-                    # other type, like date
+                    # other type, like date, I dont think we will change them
                     print "***********other type: %s"%col
-                    pass
             else:
                 pro_col = yaml_table[col]
                 base = "primary key auto_increment" if col == "id" else ""
@@ -92,9 +104,10 @@ for schema in yaml_schemas:
                 #       (schema, col, pro_col["type"], pro_col["nullable"] and\
                 #        "NULL" or "NOT NULL", pro_col["default"] or 'NULL',)
                 print sql
-                cur.execute(sql)
+                if UPDATE:
+                    cur.execute(sql)
     else:
-        sql = "create table %s \n("%("what")
+        sql = "create table %s \n("%(schema)
         cols = []
         for col in yaml_table:
             base = "primary key auto_increment" if col == "id" else ""
@@ -102,7 +115,11 @@ for schema in yaml_schemas:
         sql += " ,\n".join(cols)
         sql += ");"
         print sql
+        if UPDATE:
+            cur.execute(sql)
 
+if not UPDATE:
+    print "We won't update schema only if you force to do that"
 
 cur.close()
 conn.close()

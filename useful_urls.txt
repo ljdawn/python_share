@@ -128,3 +128,4 @@ others:
   http://www.csdn.net/article/2014-12-08/2823019-DevOps
   http://www.devopsbookmarks.com/linux
   http://bindog.github.io/blog/2015/04/20/other-way-to-collect-sina-data/
+  http://flask.pocoo.org/snippets/75/   # flask+redis+session
