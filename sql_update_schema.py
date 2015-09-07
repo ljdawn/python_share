@@ -87,7 +87,7 @@ for schema in yaml_schemas:
                         print sql
                         if UPDATE:
                             cur.execute(sql)
-                    elif not flag.groups()[1] or flag.groups()[1] or flag.groups()[1]:  # with default length
+                    elif not flag.groups()[1] or flag.groups()[2] or flag.groups()[3]:  # with default length
                         sql = "alter table %s modify %s %s"%(schema, col,\
                                                              yaml_table[col]["type"])
                         print sql

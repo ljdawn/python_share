@@ -24,6 +24,7 @@ Machine Learning:
   http://blog.niubua.com/   ## ml
   http://www.astro.washington.edu/users/vanderplas/Astr599/notebooks/
   http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html
+  http://pythonhosted.org/Kaggler/
 
 #####################################################################
 
@@ -129,3 +130,4 @@ others:
   http://www.devopsbookmarks.com/linux
   http://bindog.github.io/blog/2015/04/20/other-way-to-collect-sina-data/
   http://flask.pocoo.org/snippets/75/   # flask+redis+session
+  http://wklken.me/posts/2013/09/09/python-framework-flask.html
