@@ -25,6 +25,7 @@ Machine Learning:
   http://www.astro.washington.edu/users/vanderplas/Astr599/notebooks/
   http://seat.massey.ac.nz/personal/s.r.marsland/MLbook.html
   http://pythonhosted.org/Kaggler/
+  https://www.kaggle.com/wiki/GettingStartedWithPythonForDataScience
 
 #####################################################################
 
@@ -40,6 +41,8 @@ python:
   http://www.fullstackpython.com/task-queues.html
   http://www.kunxi.org/blog/2014/05/lru-cache-in-python/
   http://nbviewer.ipython.org/
+  http://blog.hownowstephen.com/post/50743415449/gevent-tutorial
+  http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
 #####################################################################
 
