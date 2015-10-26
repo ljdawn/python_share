@@ -27,7 +27,7 @@ class Reverse(object):
                     p = p.next
         except ValueError:
             print "input error!"
-        finally:
+        finally:z
             print "end"
 
     def rever(self):

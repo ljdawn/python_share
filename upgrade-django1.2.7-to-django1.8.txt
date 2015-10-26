@@ -27,8 +27,7 @@ this file will record what we are making to migrations
     )
 
 6.crfs_token  
-  add {% crfs_token%} for forms.submit and view function  
-  can decorates all the urls in url.py
+
 
 7.messages
   user.message_set.add() -> messages.add_message(request, messages.INFO, messages)  
@@ -42,7 +41,7 @@ this file will record what we are making to migrations
   in django1.3, we used auto_now and default in model together  
   in django1.8, just use auto_now
 
-10.PROFANITIES_LIST,mimetype  
+10.PROFANITIES_LIST(we can add that if possible),mimetype  
    deprecated 
 
 11. get_query_set -> get_queryset
@@ -55,6 +54,10 @@ this file will record what we are making to migrations
 
 14. 'FallbackStorage' object does not support indexing  
    {% if messages|is_error_msg %} -> <p class="{% if messages.0.level == DEFAULT_MESSAGE_LEVELS.ERROR %}error{% else %}success{% endif %}"  
-   bad way...
+   bad way...   need to refactor
 
 15. mod_python -> wsgi
+
+16. class TreeContact(models.Model):
+    tree = models.ForeignKey('groups.Tree', blank=True, null=True, on_delete=models.SET_NULL)
+    when delete related tables(as mysql view), we should escape that
